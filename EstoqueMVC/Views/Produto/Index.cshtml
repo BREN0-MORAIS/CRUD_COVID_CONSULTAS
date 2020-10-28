@@ -1,0 +1,65 @@
+﻿@model IList<EstoqueMVC.Models.Produto>
+
+        <table class="table table-hover">
+
+            @*Cabeçalho da tabela*@
+            <thead>
+                @* linha que vai ser colocado as coluna   *@
+                <tr>
+                    @*Colunas*@
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Quantidade</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            @*Corpo da tabela *@
+            <tbody>
+
+                @foreach (var produto in Model)
+                {
+                    <tr>
+                        <td>@produto.Id</td>
+
+                        <td>
+                            <!--cria um link, que chama o controller depois manda pra pagina que deseja,
+                            enviando o Id, que coloca o link no nome que esta na tabela
+                            --->
+                            @*<a href="/Produto/Visualizador/@produto.Id">@produto.Nome</a>*@
+
+                            <!---primeiro parametro recebe o texto que vai aparecer,
+                            segundo parametro qual aaction que vou enviar, terceiro passa o id para
+                            buscar na action
+                            segundo---->
+                            @Html.ActionLink(produto.Nome, "Visualizador", new { id = produto.Id })
+                        </td>
+                        <!----<td>@produto.Nome  <a href></a></td>-->
+                        <td class="QTD" id="quantidad(@produto.Id)">@produto.Quantidade</td>
+                        <td>@produto.Descricao</td>
+                        <td ><a  class="Decremento" href="#" onclick="decrementa(@produto.Id);">Decrementa</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+<script type="text/javascript" src="~/lib/jquery/dist/jquery.js"></script>
+
+<script type="text/javascript">
+
+    function decrementa(produtoId) {
+         //passa Url Helper que gera, passa a Action do Controller depois o Controler
+        var url = "@Url.Action("DecrementarQTD","Produto")";
+
+        $.post(url, { Id: produtoId }, atualiza);
+    }
+
+    function atualiza(reposta) {
+        var elemento = $("#quantidade" + resposta.Id);
+        elemento.html(resposta.Quantidade);
+    }
+
+
+    //ajustar, não esta funcionando a atualização em Tempo real
+
+
+
+</script>
