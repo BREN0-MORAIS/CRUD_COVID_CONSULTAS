@@ -1,7 +1,0 @@
-﻿ASP.NET MVC 5 Aula 4 - Atividade 1 Vídeo 1 Alura - Cursos on.mp4 
-ASP.NET MVC 5 Aula 5 - Atividade 1 Vídeo 1 Alura - Cursos on.mp4- 
-ASP.NET MVC 5 Aula 6 - Atividade 1 Vídeo 1 Alura - Cursos on i
-ASP.NET MVC 5 Aula 9 - Atividade 1 Vídeo 1 Alura - Cursos on - aqui
-
-
-https://cursos.alura.com.br/forum/topico-mesmo-implementando-o-ajax-a-pagina-so-atualiza-depois-do-refresh-37955
