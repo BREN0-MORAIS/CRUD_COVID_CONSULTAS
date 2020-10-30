@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDCovidWeb", "CRUDCovidWeb\CRUDCovidWeb.csproj", "{6711932D-FB5F-460E-B9E4-5E3BF610109A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6711932D-FB5F-460E-B9E4-5E3BF610109A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6711932D-FB5F-460E-B9E4-5E3BF610109A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6711932D-FB5F-460E-B9E4-5E3BF610109A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6711932D-FB5F-460E-B9E4-5E3BF610109A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C412BEF-5379-4656-88B6-AB1A7E27807C}
+	EndGlobalSection
+EndGlobal
