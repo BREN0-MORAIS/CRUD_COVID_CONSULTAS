@@ -1,0 +1,79 @@
+﻿@model IEnumerable<CRUDCovidWeb.Models.Paciente>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Pacientes</h1>
+
+<p>
+    <a asp-action="Create" type="button" class="btn btn-primary">Novo Paciente</a>
+</p>
+<table class="table col-12">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+              Nome Completo
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataNascimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MedicoId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoraConsulta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataConsulta)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome) @Html.DisplayFor(modelItem => item.Sobrenome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataNascimento)
+                </td>
+
+
+                @using (var contexto = new CRUDCovidWeb.Data.AppContexto())
+                {
+                    List<Medico> medicos = contexto.Medicos.ToList();
+
+                   @foreach (var m in medicos)
+                   {
+
+                       if (m.MedicoId == item.MedicoId)
+                       {
+                           <td>@m.Nome</td>
+                       }
+                       else
+                       {
+                           <td>Sem médico cadastrado</td>
+                       }
+                   }
+                }
+
+                 @*   @Html.DisplayFor(modelItem => item.MedicoId)*@
+        
+                <td>
+                    @Html.DisplayFor(modelItem => item.HoraConsulta)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataConsulta)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.PessoaId" t class="btn">Editar</a>
+                    <a asp-action="Details" asp-route-id="@item.PessoaId"  class="btn">Info</a>
+                    <a asp-action="Delete" asp-route-id="@item.PessoaId" type="button" class="btn btn-outline-danger">Deletar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

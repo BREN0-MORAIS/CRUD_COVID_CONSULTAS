@@ -1,0 +1,24 @@
+﻿@model CRUDCovidWeb.Models.Medico
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Medico</h4>
+    <hr />
+    <dl class="row">
+
+        <ul class="list-group col-12">
+            <li class="list-group-item">Nome Completo :   @Html.DisplayFor(model => model.Nome)</li>
+            <li class="list-group-item">Especialidade: @Html.DisplayFor(model => model.Especialidade)</li>
+            
+        </ul>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.MedicoId">Editar</a> 
+    <a asp-action="Index" type="button" class="btn btn-outline-primary">Voltar</a>
+</div>

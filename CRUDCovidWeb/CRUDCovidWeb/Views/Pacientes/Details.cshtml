@@ -1,0 +1,26 @@
+﻿@model CRUDCovidWeb.Models.Paciente
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1>Detalhes do Paciente</h1>
+
+<div>
+    <h4>Paciente</h4>
+    <hr />
+    <dl  class="row ">
+
+        <ul class="list-group col-12">
+            <li class="list-group-item">Nome Completo : @Html.DisplayNameFor(model => model.Nome)  @Html.DisplayNameFor(model => model.Sobrenome)</li>
+            <li class="list-group-item"> Data Nascimento @Html.DisplayFor(model => model.DataNascimento)</li>
+            <li class="list-group-item"> Medico:  @Html.DisplayNameFor(model => model.MedicoId)</li>
+            <li class="list-group-item"> Hora Consulta @Html.DisplayNameFor(model => model.HoraConsulta)</li>
+            <li class="list-group-item"> Data Consulta @Html.DisplayNameFor(model => model.DataConsulta)</li>
+        </ul>
+    </dl>
+</div>
+<div class="text-center">
+    <a asp-action="Edit" asp-route-id="@Model.PessoaId" type="button" class="btn btn-primary">Editar</a> 
+    <a asp-action="Index" type="button" class="btn btn-outline-primary">Voltar</a>
+</div>

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<CRUDCovidWeb.Models.Medico>
+
+
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Medico</h1>
+
+<p>
+    <a asp-action="Create" type="button" class="btn btn-primary">Novo Medico</a>
+
+    <a type="button" class="btn btn-outline-info" asp-area="" asp-controller="Pacientes" asp-action="Index">Consultas Marcadas</a>
+
+</p>
+<table class="table ">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Especialidade)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Especialidade)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MedicoId" type="button" class="btn btn-outline-primary">Editar</a>
+                <a asp-action="Details" asp-route-id="@item.MedicoId" type="button" class="btn btn-outline-info">Detalhes</a>
+                <a asp-action="Delete" asp-route-id="@item.MedicoId" type="button" class="btn btn-outline-danger">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+

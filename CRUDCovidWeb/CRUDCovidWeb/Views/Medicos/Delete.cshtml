@@ -1,0 +1,33 @@
+﻿@model CRUDCovidWeb.Models.Medico
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Deltar</h1>
+
+<h3>Deseja Deletar Medico?</h3>
+<div>
+    <h4>Medico</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Especialidade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Especialidade)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="MedicoId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> 
+        <a asp-action="Index" type="button" class="btn btn-outline-primary">Voltar</a>
+    </form>
+</div>
