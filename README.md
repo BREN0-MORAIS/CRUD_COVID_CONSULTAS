@@ -31,6 +31,12 @@
       <li>Jquery</li>
       <li>Bootstrap</li>
      </ul>
+ 
+ 
+   <li>:heavy_check_mark:<b>Banco de Dados</b>
+     <ul>
+       <li>SQL Server</li>
+     </ul>
   </li>
   
   
