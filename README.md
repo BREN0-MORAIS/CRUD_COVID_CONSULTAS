@@ -1,5 +1,5 @@
 # CRUD_COVID_CONSULTAS 📁
-<b>📄Descrição: </b>Desenvolver um sistema we de consultad e cadastro de pacientes e medicos, matéria de desenvolvimento web II
+<b>📄Descrição: </b>Desenvolver um CRUD que cadastre, exclua e atualiza pacientes e Médicos
 
 <h2>:checkered_flag:Tecnologias Utilizadas</h2>
 <br>
