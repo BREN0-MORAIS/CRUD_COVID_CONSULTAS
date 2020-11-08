@@ -1,11 +1,11 @@
-# CRUD_COVID_CONSULTAS
-<b>Descrição: </b>Desenvolver um sistema we de consultad e cadastro de pacientes e medicos, matéria de desenvolvimento web II
+# CRUD_COVID_CONSULTAS 📁
+<b>📄Descrição: </b>Desenvolver um sistema we de consultad e cadastro de pacientes e medicos, matéria de desenvolvimento web II
 
 <h2>:checkered_flag:Tecnologias Utilizadas</h2>
 <br>
 
 <ul>
- 
+
   <li>:heavy_check_mark:<b>ORM</b> 
       <ul>
        <li>Entity Framework Core</li>
@@ -43,8 +43,8 @@
 </ul>
 
 <img src="https://github.com/BREN0-MORAIS/CRUD_COVID_CONSULTAS/blob/main/FTBrenoMorais.jpg">
-<h3>Breno Morais</h3>
-<h4>linkedin: <a href="https://www.linkedin.com/in/breno-morais-79b328167/">Breno Morais<a/></h4> 
- <h4>GitHub: <a href="https://github.com/BREN0-MORAIS/">Ver Outros Projetos<a/></h4> 
+<h3>🧑Breno Morais</h3>
+<h4>🔗linkedin: <a href="https://www.linkedin.com/in/breno-morais-79b328167/">Breno Morais<a/></h4> 
+ <h4>🔗GitHub: <a href="https://github.com/BREN0-MORAIS/">Ver Outros Projetos<a/></h4> 
 
 
